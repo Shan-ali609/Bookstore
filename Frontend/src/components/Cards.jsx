@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function Cards({item}) {
-    console.log(item);
     
   return (
     <div className='mt-4 mb-3'>

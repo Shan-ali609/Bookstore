@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Login from "./Login";
-
+import { Link } from "react-router-dom";
+import Logout from "./Logout";
+import { useAuth } from "./contextapi/Userauth";
 export default function Navbar() {
+  const [authUser, setAuthUser] = useAuth();
   const [sticky, setSticky] = useState(false);
   const [openit, setOpenit] = useState(false);
 
@@ -21,10 +24,13 @@ export default function Navbar() {
   const NavItems = (
     <>
       <li>
-        <a href="/">Home</a>
+        {/* <a href="/">Home</a> */}
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <a href="/course">Course</a>
+        {/* <a href="/course">Course</a> */}
+        <Link to="/course">Course</Link>
+         
       </li>
       <li>
         <a>Contact</a>
@@ -118,11 +124,14 @@ export default function Navbar() {
                 </svg>
               </label>
             </div>
-            <div onClick={isopen}>
+            
+            {authUser ? <Logout /> : 
+             <div onClick={isopen}>
               <a className="bg-black text-white py-2 px-3 rounded-md hover:bg-slate-800 duration-300 cursor-pointer">
-                Login
+               Login
               </a>
-            </div>
+             </div> 
+          }
           </div>
         </div>
       </div>
