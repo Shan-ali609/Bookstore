@@ -123,7 +123,7 @@ export default function Login({ isclose }) {
 
     try {
       // const res = await axios.post('http://localhost:4001/user/login', userinfo);
-      const res = await axios.post('https://bookstore-api-mu.vercel.app', userinfo);
+      const res = await axios.post('https://bookstore-api-mu.vercel.app/user/login', userinfo);
 
       console.log(res.data); // Debugging: Log the server response
       toast.success("Login successfully",{duration : 7000});
