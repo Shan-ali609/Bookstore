@@ -125,7 +125,9 @@ export default function Signup() {
 
     try {
       // Make the signup request
-       const res = await axios.post('http://localhost:4001/user/singup', userinfo);
+      //  const res = await axios.post('http://localhost:4001/user/singup', userinfo);
+       const res = await axios.post('https://bookstore-api-mu.vercel.app/', userinfo);
+
       console.log(res.data); // Debugging: Log the server response
       
       // Show success toast for 3 seconds
