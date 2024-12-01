@@ -1,17 +1,4 @@
-// import React, { useContext, useState } from 'react'
-       
 
-//     const Authcontext =  useContext();
-// export default function Userauth({}) {
-//    const initialuser = localStorage.getItem("users");
-//    const [authUser , setauthUser] = useState(
-//     initialuser ? JSON.parse(initialuser) : undefined
-//    )
-//    return(
-//     <Authcontext.Provider value = {[authUser , setauthUser]} >{children}</Authcontext.Provider>
-//    )
-// }
-// export const useauth = useContext(Authcontext);
 
 import React, { createContext, useContext, useState } from 'react';
 
